@@ -1,7 +1,7 @@
 Meteor.startup(function(){
 	var famous = require('famous');
 	// Famous dependencies
-	var DOMElement = famous.domRenderables.DOMElement;
+	//var DOMElement = famous.domRenderables.DOMElement;
 	var FamousEngine = famous.core.FamousEngine;
 	// Initialize the FamousEngine to start the rendering process
 	FamousEngine.init();
@@ -23,9 +23,8 @@ Meteor.startup(function(){
 	// Create a scene for the FamousEngine to render
 	var scene = FamousEngine.createScene('body');
 	var rootNode = scene.addChild();
-	var element = new DOMElement(rootNode);
 	rootNode.setSizeMode('absolute', 'absolute', 'absolute')
-		.setAbsoluteSize(300, 300)
+		.setAbsoluteSize(300, 300);
 // add DOM element component with content
 	rootNode.setAlign(0.5,0.5);
 	waitForDOMElementFromNodePromise(rootNode)
